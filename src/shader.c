@@ -55,3 +55,13 @@ void shader_use(shader_t shader) {
 void shader_destroy(shader_t shader) {
     glDeleteProgram(shader.id);
 }
+
+void shader_set_mat4fv(shader_t shader, mat4 matrix, const char *name) {
+    int location = glGetUniformLocation(shader.id, name);
+    glUniformMatrix4fv(location, 1, GL_FALSE, (float*)matrix);
+}
+
+void shader_set_int(shader_t shader, const char *name, vec3 v3) {
+    int location = glGetUniformLocation(shader.id, name);
+    glUniform3fv(location, 1, (float*)v3);
+}

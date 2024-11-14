@@ -14,7 +14,7 @@ LDFLAGS = -lglfw -lm -ldl
 
 # Source files
 # This lists the source files to compile. glad.c is expected to be located in /usr/local/lib.
-SOURCES = /usr/local/lib/glad.c src/main.c src/block_renderer.c src/shader.c
+SOURCES = /usr/local/lib/glad.c src/main.c src/block_renderer.c src/shader.c src/camera.c src/window.c src/block.c
 
 # Name of the output executable
 TARGET = tetris

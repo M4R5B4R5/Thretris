@@ -1,7 +1,8 @@
 #version 330 core
 
-out vec3 frag;
+in vec3 iFrag;
+out vec3 oFrag;
 
 void main() {
-    frag = vec3(1.0, 1.0, 0.0);
+    oFrag = iFrag;
 }
